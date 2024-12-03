@@ -16,6 +16,8 @@ RUN npx create-react-app my-app
 # 设置工作目录为刚刚创建的 React 项目目录
 WORKDIR /app/my-app
 
+VOLUME ["/app"]
+
 # 先不执行启动命令，仅构建镜像，项目依赖安装会在运行时进行
 # 暴露 React 默认使用的 3000 端口
 EXPOSE 3000
